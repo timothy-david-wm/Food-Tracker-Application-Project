@@ -37,7 +37,7 @@ var calInput = document.getElementById("cal");
     /*Update Table With New Item*/
         function updateTable(item) {
                 /*If Item Is Empty, Dont Update Table*/
-                    if(item.name == "" || item.desc == "" || item.date == "" || item.life == "" || item.exp == "" || item.cal == "") return;
+                    if(item.name == "" || item.desc == "" || item.date == "" || item.life == "" || item.exp == "" || item.cal == ""){alert("Please fill thw whole chart before proceeding"); return;}
 
                     /*Create New TR And TD For Table Output*/
                         var tablerow = document.createElement("tr");
@@ -58,15 +58,15 @@ var calInput = document.getElementById("cal");
 
                     /*If Shelf Life Is Less Than 3 Days, Set Background To Red*/
 
-                        if(parseFloat(item.life) <= 1) tablerow.style.backgroundColor = "darkRed";
-                if(parseFloat(item.life) === 2) tablerow.style.backgroundColor = "red";
-                if(parseFloat(item.life) === 3) tablerow.style.backgroundColor = "pink";
-                if(parseFloat(item.life) === 4) tablerow.style.backgroundColor = "blue";
-                if(parseFloat(item.life) === 5) tablerow.style.backgroundColor = "green";
-                if(parseFloat(item.life) === 6) tablerow.style.backgroundColor = "lightGray";
-                if(parseFloat(item.life) === 7) tablerow.style.backgroundColor = "gold";
-                if(parseFloat(item.life) === 8) tablerow.style.backgroundColor = "green";
-                if(parseFloat(item.life) > 8) tablerow.style.backgroundColor = "honeydew";
+                        if(parseFloat(item.life) <= 1) life.style.backgroundColor = "darkRed";
+                if(parseFloat(item.life) === 2) life.style.backgroundColor = "red";
+                if(parseFloat(item.life) === 3) life.style.backgroundColor = "pink";
+                if(parseFloat(item.life) === 4) life.style.backgroundColor = "blue";
+                if(parseFloat(item.life) === 5) life.style.backgroundColor = "green";
+                if(parseFloat(item.life) === 6) life.style.backgroundColor = "lightGray";
+                if(parseFloat(item.life) === 7) life.style.backgroundColor = "gold";
+                if(parseFloat(item.life) === 8) life.style.backgroundColor = "green";
+                if(parseFloat(item.life) > 8) life.style.backgroundColor = "honeydew";
                 /*Append New Elements To Table*/
                     tablerow.appendChild(name);
                 tablerow.appendChild(cal);
