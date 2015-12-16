@@ -4,6 +4,8 @@
 /**
  * Created by session2 on 10/20/15.
  */
+
+
 var nameInput = document.getElementById("name");
 var descInput = document.getElementById("desc");
 var dateInput = document.getElementById("date");
@@ -75,4 +77,16 @@ var calInput = document.getElementById("cal");
                 tablerow.appendChild(date);
                 tablerow.appendChild(exp);
                 tableOutput.appendChild(tablerow);
+                $(".header").on('click', function(){
+                    tablerow.appendChild("Name");
+                    tablerow.appendChild("Calories");
+                    tablerow.appendChild("Description");
+                    tablerow.appendChild("Life");
+                    tablerow.appendChild("Date");
+                    tablerow.appendChild("Expiration Date");
+                    tableOutput.appendChild(tablerow);
+                });
+                $('tr').on('click', function() {$(this).remove();});
             }
+
+
